@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class LaguAnakAyam {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Masukkan angka N: ");
+        int n = scanner.nextInt();
+
+        System.out.println("Lirik Lagu Anak Ayam Turun " + n + ":");
+
+        // Perulangan for
+        for (int i = n; i >= 0; i--) {
+            System.out.println("Anak ayam turun " + i + ", mati satu tinggal " + (i - 1));
+        }
+
+        // Perulangan while
+        int j = n;
+        while (j >= 0) {
+            System.out.println("Anak ayam turun " + j + ", mati satu tinggal " + (j - 1));
+            j--;
+        }
+
+        // Perulangan do-while
+        int k = n;
+        do {
+            System.out.println("Anak ayam turun " + k + ", mati satu tinggal " + (k - 1));
+            k--;
+        } while (k >= 0);
+    }
+}
