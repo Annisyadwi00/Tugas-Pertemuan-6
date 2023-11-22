@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class DeretBilanganGanjilGenap {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Masukkan angka untuk menentukan batas atas deret: ");
+        int batasAtas = scanner.nextInt();
+
+        System.out.println("Deret Bilangan Ganjil dan Genap dari 0 - " + batasAtas + ":");
+
+        // Perulangan for
+        for (int i = 0; i <= batasAtas; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i + " adalah bilangan genap");
+            } else {
+                System.out.println(i + " adalah bilangan ganjil");
+            }
+        }
+
+        // Perulangan while
+        int j = 0;
+        System.out.println("\nDeret Bilangan Ganjil dan Genap dari 0 - " + batasAtas + " (while):");
+        while (j <= batasAtas) {
+            if (j % 2 == 0) {
+                System.out.println(j + " adalah bilangan genap");
+            } else {
+                System.out.println(j + " adalah bilangan ganjil");
+            }
+            j++;
+        }
+
+        // Perulangan do-while
+        int k = 0;
+        System.out.println("\nDeret Bilangan Ganjil dan Genap dari 0 - " + batasAtas + " (do-while):");
+        do {
+            if (k % 2 == 0) {
+                System.out.println(k + " adalah bilangan genap");
+            } else {
+                System.out.println(k + " adalah bilangan ganjil");
+            }
+            k++;
+        } while (k <= batasAtas);
+    }
+}
