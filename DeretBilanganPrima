@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class DeretBilanganPrima {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Masukkan angka untuk memeriksa bilangan prima: ");
+        int inputNumber = scanner.nextInt();
+
+        // Perulangan for
+        System.out.println("Deret Bilangan Prima dan Bukan dari 0 - " + inputNumber + " (for):");
+        for (int i = 0; i <= inputNumber; i++) {
+            if (isPrima(i)) {
+                System.out.println(i + " adalah bilangan prima");
+            } else {
+                System.out.println(i + " bukan bilangan prima");
+            }
+        }
+
+        // Perulangan while
+        int j = 0;
+        System.out.println("\nDeret Bilangan Prima dan Bukan dari 0 - " + inputNumber + " (while):");
+        while (j <= inputNumber) {
+            if (isPrima(j)) {
+                System.out.println(j + " adalah bilangan prima");
+            } else {
+                System.out.println(j + " bukan bilangan prima");
+            }
+            j++;
+        }
+
+        // Perulangan do-while
+        int k = 0;
+        System.out.println("\nDeret Bilangan Prima dan Bukan dari 0 - " + inputNumber + " (do-while):");
+        do {
+            if (isPrima(k)) {
+                System.out.println(k + " adalah bilangan prima");
+            } else {
+                System.out.println(k + " bukan bilangan prima");
+            }
+            k++;
+        } while (k <= inputNumber);
+    }
+
+    private static boolean isPrima(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
