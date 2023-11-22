@@ -1,0 +1,24 @@
+public class UrutHurufZA {
+    public static void main(String[] args) {
+        System.out.println("Huruf Z - A:");
+
+        // Perulangan for
+        for (char c = 'Z'; c >= 'A'; c--) {
+            System.out.println(c);
+        }
+
+        // Perulangan while
+        char d = 'Z';
+        while (d >= 'A') {
+            System.out.println(d);
+            d--;
+        }
+
+        // Perulangan do-while
+        char e = 'Z';
+        do {
+            System.out.println(e);
+            e--;
+        } while (e >= 'A');
+    }
+}
